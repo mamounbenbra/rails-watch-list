@@ -14,8 +14,11 @@ class ListsController < ApplicationController
 
   def create
     @list = List.new(list_params)
-    @list.save
-    redirect_to action: "index"
+    if @list.save
+      redirect_to list_path
+    else
+      render:new
+    end
   end
 
   private

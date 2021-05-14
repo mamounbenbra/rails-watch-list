@@ -13,9 +13,9 @@
 
 <% @list.bookmarks.each do |bookmark| %>
 <div class="card-product">
-  <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
+  <img src="<%=bookmark.movie.poster_url%>" >
   <div class="card-product-infos">
-    <h2>TITLE:  <%=bookmark.movie.title %></h2>
+    <h2 >TITLE:  <%=bookmark.movie.title %></h2>
     <h2>OVERVIEW:  <%=bookmark.movie.overview %></h2>
     <h2>RATING:  <%= bookmark.movie.rating %>/10</h2>
     <h2>COMMENT:  <%= bookmark.comment %></h2>
@@ -23,4 +23,8 @@
   </div>
 </div>
   <% end %>
+
+<div class="d-flex justify-content-center align-items-center">
+<%= link_to 'Return to lists', lists_path, class: "btn btn-primary ahoui"  %>
+</div>
 

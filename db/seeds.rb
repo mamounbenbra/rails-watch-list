@@ -19,7 +19,7 @@ Bookmark.create(comment: "very good film", movie_id: 2, list_id: 2)
 Bookmark.create(comment: "very good film", movie_id: 3, list_id: 3)
 
 100.times do
-  Movie.create(title: Faker::Movie.title, overview: Faker::Movie.quote, rating: rand(1..5), poster_url: "https://source.unsplash.com/radom")
+  Movie.create(title: Faker::Movie.title, overview: Faker::Movie.quote, rating: rand(1..5), poster_url: "https://source.unsplash.com/random")
 end
 
 

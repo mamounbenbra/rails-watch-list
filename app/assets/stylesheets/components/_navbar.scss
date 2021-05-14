@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
@@ -9,4 +10,21 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.navmams {
+  width: 100vw;
+  height: 10vh;
+  background-color: #FBC3BC;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+    h1{
+      font-family: 'Poppins', sans-serif;
+      color: #ff4f4f;
+      margin-bottom:0px;
+      font-size: 25px;
+    }
 }

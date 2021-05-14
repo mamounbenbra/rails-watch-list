@@ -1,0 +1,26 @@
+<div class="navmams">
+<h1>mamoun au ciné <strong>TRANQUILLE</strong></h1>
+</div>
+
+<div class="d-flex justify-content-center align-items-center">
+<h1 class='oui'><%= @list.name %> movies</h1>
+</div>
+
+<div class="d-flex justify-content-center align-items-center">
+<%= link_to 'Add a bookmark', new_list_bookmark_path(@list), class: "btn btn-primary ahoui"  %>
+</div>
+
+
+<% @list.bookmarks.each do |bookmark| %>
+<div class="card-product">
+  <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
+  <div class="card-product-infos">
+    <h2>TITLE:  <%=bookmark.movie.title %></h2>
+    <h2>OVERVIEW:  <%=bookmark.movie.overview %></h2>
+    <h2>RATING:  <%= bookmark.movie.rating %>/10</h2>
+    <h2>COMMENT:  <%= bookmark.comment %></h2>
+    <%= link_to 'destroy', bookmark_path(bookmark), method: :delete, data: {confirm: 'are you sure'}, class: 'btn btn-danger'%>
+  </div>
+</div>
+  <% end %>
+

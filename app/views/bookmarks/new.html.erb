@@ -1,0 +1,11 @@
+<div class="navmams">
+<h1>mamoun au ciné <strong>TRANQUILLE</strong></h1>
+</div>
+
+<div class="container mt-5 justify-content-center align-items-center">
+<%= simple_form_for [@list, @bookmark] do |f| %>
+  <%= f.input :comment %>
+  <%= f.association :movie %>
+  <%= f.submit class: 'btn btn-outline-primary mt-3' %>
+<% end %>
+</div>

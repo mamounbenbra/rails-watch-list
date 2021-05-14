@@ -1,0 +1,15 @@
+<div class="navmams">
+<h1>mamoun au ciné <strong>TRANQUILLE</strong></h1>
+</div>
+
+<div class="container d-flex justify-content-center align-items-center mt-4">
+<%= simple_form_for [ @list ] do |f| %>
+<div class="div">
+  <%= f.input :name %>
+</div>
+  <%= f.input :photo, as: :file %>
+<div class="div">
+  <%= f.submit "Submit", class: "btn btn-primary" %>
+</div>
+<% end %>
+</div>
